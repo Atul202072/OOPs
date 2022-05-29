@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
-class Shape
+class Shape                                     //class
 {
-protected:
-    int side;
+protected:                                      //access modifier
+    int side;                                   //data member 
 
 public:
-    virtual void number_Of_Sides() = 0;
+    virtual void number_Of_Sides() = 0;          //pure virtual function
 };
-class Trapezoid : public Shape
+class Trapezoid : public Shape                  //inheritance
 {
 public:
-    Trapezoid(int side)
+    Trapezoid(int side)                             //contructor
     {
         this->side = side;
     };
 
-    void number_Of_Sides()
+    void number_Of_Sides()                           //member function
     {
         cout << "The Number of sides in Trapezoid is : " << side << endl;
     };
@@ -57,11 +57,11 @@ int main()
     cout<<"Enter the nubmer of sides in Hexagon: ";
     cin>>c;
     cout<<""<<endl;
-    Trapezoid t1(a);
+    Trapezoid t1(a);                               //creating object 
     Triangle t2(b);
     Hexagon t3(c);
-
-    t1.number_Of_Sides();
+ 
+    t1.number_Of_Sides();                           //function call
     t2.number_Of_Sides();
     t3.number_Of_Sides();
     return 0;
