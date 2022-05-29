@@ -2,23 +2,23 @@
 #include<math.h>
 using namespace std;
 
-class Power
+class Power                         //creating the class
 {
     public:
-    double power(double m,int n)
+    double power(double m,int n)       //defining member function
     {
-    int i, ans=1;
-       for(i=1;i<=n;i++)
+    int i, ans=1;                      
+       for(i=1;i<=n;i++)              //using for loop
        {
            ans=ans*m;
        }
         return ans;
     }
-    double power(double m)
+    double power(double m)             //function overloading
     {
         int n=2;
         double a;
-        a=pow(m,n);
+        a=pow(m,n);                    //using math library function pow()
         return a;
     }
 };
@@ -27,7 +27,7 @@ class Power
     { 
     int result=0;
     int base,power;
-    Power pow;
+    Power pow;                             //creating object of Power class
     cin>>base;
     cin>>power;
     result=pow.power(base,power);
